@@ -1,1 +1,2 @@
 # interesting
+Collect all
