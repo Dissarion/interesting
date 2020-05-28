@@ -55,3 +55,17 @@ const susan = new Person('susan');
 console.log(john.getName());
 console.log(susan.getName());
 ```
+### Что выведет в консоль?
+```javascript
+const user = { name: 'John' };
+const position = { title: 'Frontend' };
+
+user.position = position;
+user.position.salary = 10000;
+
+position.title = 'Backend';
+
+console.log(user);
+console.log(user.position);
+console.log(position);
+```
