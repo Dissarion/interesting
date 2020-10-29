@@ -79,3 +79,101 @@ console.log(position);
 ### Как работает Event Loop?
 ### Как работают таски и микротаски?
 ### Как работает наследование в JavaScript?
+
+
+
+
+### Написать функцию сравнения
+```javascript
+function whatIs(arg) {
+    const isNull = // ?
+    const isObject = // ?
+    const isArray = // ?
+    const isNaN = // ?
+    
+
+    if (isObject) return 'object';
+    if (isArray) return 'array';
+    if (isNull) return 'null';
+    if (isNaN) return 'nan';
+}
+```
+
+### Что выведут элементы
+var f = [];
+
+f[100] = 100;
+console.log(f.lenght) // ?
+
+const arr = new Array(500);
+
+arr.map(console.log) // ?
+
+for (let i = 0; i < arr.length; i++) console.log(arr[i]); // ?
+
+
+### В каком порядке выведутся логи
+
+let loading = true;
+
+setTimeout(() => {
+    loading = false;
+    console.log('1', loading); // ?
+}, 0);
+
+Promise.resolve(() => {
+    setTimeout(() => {
+        loading = false;
+        console.log('2', loading); // ?
+    }, 0);
+})
+
+// Promise.resolve(loading = false);
+
+while(loading) {
+    console.log('loading ...'); // ?
+}
+
+setTimeout(() => {
+    loading = false;
+    console.log('3', loading); // ?
+}, 0);
+
+ 
+// ----------------------------------------------------- //
+//Напиши функцию проверки строки на палиндром «А муза рада музе без ума да разума» за один проход, игнорируя пробелы и регистр
+
+
+function palendrom(str) {
+    for (let i = 0; i < str.length; i++) {
+        const left = str[i];
+        const right = str[str.length - 1 - i];
+        
+        if (left !== right) return false;
+    }
+    
+    return true;
+}
+
+
+
+// Написать функцию counter() каждый вызов которой увеличивает счётчик и возвращает результат
+
+
+
+function counter() {}
+
+
+const c = counter();
+
+
+c() // 1
+c() // 2
+c() // 3
+    
+c.reset() // и добавить возможность сбросить счетчик
+c() // 1
+    
+    
+    
+    
