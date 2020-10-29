@@ -100,6 +100,7 @@ function whatIs(arg) {
 ```
 
 ### Что выведут элементы
+```javascript
 var f = [];
 
 f[100] = 100;
@@ -110,10 +111,11 @@ const arr = new Array(500);
 arr.map(console.log) // ?
 
 for (let i = 0; i < arr.length; i++) console.log(arr[i]); // ?
+```
 
 
 ### В каком порядке выведутся логи
-
+```javascript
 let loading = true;
 
 setTimeout(() => {
@@ -138,42 +140,28 @@ setTimeout(() => {
     loading = false;
     console.log('3', loading); // ?
 }, 0);
-
+```
  
-// ----------------------------------------------------- //
-//Напиши функцию проверки строки на палиндром «А муза рада музе без ума да разума» за один проход, игнорируя пробелы и регистр
+### Напиши функцию проверки строки на палиндром «А муза рада музе без ума да разума» за один цикл, игнорируя пробелы и регистр
 
+```javascript
+function palindrome(str) {}
+```
 
-function palendrom(str) {
-    for (let i = 0; i < str.length; i++) {
-        const left = str[i];
-        const right = str[str.length - 1 - i];
-        
-        if (left !== right) return false;
-    }
-    
-    return true;
-}
+### Написать функцию counter() каждый вызов которой увеличивает счётчик и возвращает результат
 
-
-
-// Написать функцию counter() каждый вызов которой увеличивает счётчик и возвращает результат
-
-
-
+```javascript
 function counter() {}
 
-
 const c = counter();
-
 
 c() // 1
 c() // 2
 c() // 3
-    
+
 c.reset() // и добавить возможность сбросить счетчик
+
 c() // 1
-    
-    
+```
     
     
